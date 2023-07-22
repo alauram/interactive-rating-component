@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+--Orange: hsl(25, 97%, 53%);
+--White: hwb(0 100% 0%);
+--Light-Grey: hsl(217, 12%, 63%);
+--Medium-Grey: hsl(216, 12%, 54%);
+--less-dark-blue: hsl(213, 19%, 23%);
+--Dark-Blue: hsl(213, 19%, 18%);
+--Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.9375rem;
+    background-color: var(--Very-Dark-Blue);
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    background-color: var(--Dark-Blue);
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    gap: 2rem;
+}
+.star {
+    background-color: var(--less-dark-blue);
+    padding: 15px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+.middle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.container h1 {
+    color: var(--White);
+    font-size: 2.5rem;
+}
+.container p {
+    color: var(--Light-Grey);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.selection {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 0.8rem;
+}
+.selection button {
+    background-color: var(--less-dark-blue);
+    color: var(--Light-Grey);
+    border: none;
+    outline: none;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.submit button{
+    width: 100%;
+    background-color: var(--Orange);
+    border: none;
+    outline: none;
+    padding: 1.1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--White);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.selection button:hover {
+    background-color: var(--Light-Grey);
+    color: var(--White);
+    transition: all ease 0.5s;
+}
+.selection button.selected {
+    color: var(--White);
+    background-color:var(--Orange);
+    transition: all ease 0.5s;
+
+}
+.submit button:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+    transition: all ease 0.5s;
+}
+.success {
+    display: flex;
+    background-color: var(--Dark-Blue);
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+.success-top {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+} 
+.success-top p {
+    color: var(--Orange);
+    background-color: var(--less-dark-blue);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1.15rem;
+    border-radius: 2rem;
+}
+.success-top img {
+    width: 70%;
+}
+.success-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+.success-bottom h1 {
+    color: var(--White);
+    font-size: 2.3rem;
+}
+.success-bottom p {
+    text-align: center;
+    font-size: 1.15rem;
+    color: var(--Light-Grey);
+    line-height: 1.8rem;
+}
+.hide {
+    display: none;
+}
+@media screen and (max-width:600px){
+    .container {
+        max-width: 90%;
+    }
+    .container h1 {
+        font-size: 1.7rem;
+    }
+    .container p {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    .selection {
+        grid-column-gap: 0.9rem;
+    }
+    .selection button {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+    .submit button {
+        font-size: 1rem
+    }
+    .success {
+        max-width: 90%;
+        gap: 1.3rem;
+    }
+    .success-top p {
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+    .success-bottom h1 {
+        font-size: 1.7rem;
+    }
+    .success-bottom p {
+        font-size: 1rem;
+        line-height: 1.4rem
+    }
+}
